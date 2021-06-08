@@ -1,0 +1,9 @@
+<div class="container-fluid">
+    <h2>XSS URL- Don't trust</h2>
+    <a [href]="xssUrl">Click here- not safe</a>
+    <h2>Trusted URL</h2>
+    <a [href]="trustedUrl">Click here- safe</a>
+</div>
+<iframe [src]="y" frameborder="2" width="500" height="300"></iframe>
+
+

@@ -1,0 +1,27 @@
+h3{
+
+    text-align: center;
+    color: rgb(0,125,255);
+    background-color:aqua;
+    text-decoration-color: blue;
+}
+
+.card{
+    text-align: center;
+    font-weight: bold;
+}
+
+.a1{
+    text-align: left;
+}
+
+div{
+
+    font-size:13.5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button{
+   
+    font-size:15px;
+}

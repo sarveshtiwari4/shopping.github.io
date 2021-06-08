@@ -1,0 +1,15 @@
+
+<div class="row">
+<div col="4">
+    <h3>Product list</h3>
+<ol>
+    <li *ngFor="let item of products">
+      <button (click)="detailsclick(item.productid)" class="btn btn-link">  {{item.name}}-   {{item.price | currency:'INR'}} </button>
+    </li>
+</ol>
+<a routerLink="/categories">Back to Categories</a>
+</div>
+<div class="col-8">
+<router-outlet></router-outlet>
+</div>
+</div>

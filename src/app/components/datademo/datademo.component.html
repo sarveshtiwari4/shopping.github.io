@@ -1,0 +1,49 @@
+<div class="container-fluid">
+    <h3>Register Product</h3>
+    <form #frmregister="ngForm" method="POST" (submit)="onFormsubmit(frmregister.value)">
+    <dl>
+        <dt>
+           Product ID:
+        </dt>
+        <dd>
+            <input type="text" ngModel name="productid" #productid="ngModel">
+        </dd>
+
+        <dt>
+            Name:
+        </dt>
+        <dd>
+            <input type="text" ngModel  name="name" #name="ngModel">
+        </dd>
+
+        <dt>
+            Price:
+        </dt>
+        <dd>
+            <input type="number"  ngModel  name="price" #price="ngModel">
+        </dd>
+    </dl>
+    <button class="btn btn-primary">Register</button>
+</form>
+
+    <h3>Product list</h3>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Product Id  </th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of products">
+
+                <td>{{item.productid}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.price}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+
+</div>

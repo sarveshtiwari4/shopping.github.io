@@ -1,0 +1,8 @@
+<div class="container-fluid">
+    <button (click)="zoomClick()">{{zoomEffect}} </button>
+
+</div>
+
+<div class="form-group">
+<img [@zoomEffect]="animationState" src="assets/shirt.jpg" (mouseover)="zoomClick()">
+</div>

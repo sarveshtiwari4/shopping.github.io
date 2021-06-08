@@ -1,0 +1,25 @@
+<h3>Login</h3>
+<div class="row">
+
+<dl>
+    <dt>
+        User Name :
+   </dt>
+   <dd><input type="text" class="form-control" #uname  ></dd>
+   <dt>
+    Password :
+    </dt>
+    <dd><input type="password" class="form-control" #pwd ></dd>
+    <dt>
+    Roll :
+    </dt>
+    <select #roll class="form-control" required>
+        <option value="Novalue">Select Roll</option>
+        <option value="admin">Admin</option>
+        <option value="manager">Manager</option>
+    </select>
+    <br>
+   <dd><button class="btn btn-primary" (click)="loginclick(uname.value, pwd.value, roll.value)">Login</button></dd>
+   
+</dl>
+</div>

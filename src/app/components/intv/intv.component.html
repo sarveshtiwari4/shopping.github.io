@@ -1,0 +1,139 @@
+<div class="container-fluid">
+    <h3 >Interview : Board Selection Process</h3>
+    <div class="row">
+    <div class="col-3" >
+      
+
+        <div class="ml-4">
+
+            <dl>
+                <dt>
+                    Exam Name:
+                </dt>
+                <dd>
+                    <select  [(ngModel)]="examname" class="form-control">
+                        <option *ngFor="let item of exam">{{item.name}}</option>
+                    </select>
+                </dd>
+
+                <dt>
+                    Interview Date:
+                </dt>
+                <dd>
+                    <input  [(ngModel)]="doi" type="text" class="form-control" >
+                </dd>
+
+                <dt>
+                    Interview Shift :
+                </dt>
+
+                <dd>
+                    <select  [(ngModel)]="shift"  (change)="onInterviewChange()"  class="form-control" required>
+                        <option value="Novalue">Select Shift</option>
+                        <option value=1>First</option>
+                        <option value=2>Second</option>
+                    </select>
+                </dd>
+            </dl>
+            
+            <div class="card">
+
+                <div class="card-header a1">
+
+                    Roll Number List :
+
+                </div>
+                
+                <div class="card-body" width="50">
+                   
+
+                    <select [(ngModel)]="filterrollno" name="rolllist" id="Select1" size="10" multiple="multiple" class="form-control">
+
+                    <ng-container *ngIf="show; else elseBlock"> 
+                       
+                            <option *ngFor="let item of selectedrollno">{{item.rollno}} </option>
+                                 
+                        </ng-container>
+
+                      <ng-template #elseBlock>  
+                       
+                        <option *ngFor="let item of selectedrollno ">{{item.rollno}} </option>
+                             
+                        </ng-template>
+                         
+                    </select>
+               
+                    
+
+                
+                </div>
+                
+         
+            </div>
+
+          </div>
+
+          
+    </div>
+
+    <div class="col-8">
+       
+
+        <div class="row">
+          
+            <div class="col-3">
+              <div class="card">  
+                 <div class="card-header" >
+                    <label for="rolllistA">Board 'A' [{{countA}}]</label></div>
+                        <div class="card-body">
+                            <select (dblclick)="deleteitemA()" [(ngModel)]="rollnoA" name="rolllistA" id="Select1A" size="10" multiple="multiple" class="form-control">
+                             <option *ngFor="let item of selectedrollnoA">{{item }} </option>
+                            </select>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card">  
+                   <div class="card-header" >
+                        <label for="rolllistB">Board 'B' [{{countB}}]</label></div>
+                            <div class="card-body">
+                                <select (dblclick)="deleteitemB()" [(ngModel)]="rollnoB" name="rolllistB" id="Select1B" size="10" multiple="multiple" class="form-control">
+                                    <option *ngFor="let item of selectedrollnoB">{{item}} </option>
+                                 </select>
+                            </div>
+                </div>
+            </div>
+
+
+
+
+              <div class="col-3">
+                <div class="card">  
+                     <div class="card-header" >
+                         <label for="rolllistC">Board 'C' [{{countC}}]</label></div>
+                             <div class="card-body">
+                                <select (dblclick)="deleteitemC()" [(ngModel)]="rollnoC" name="rolllistC" id="Select1C" size="10" multiple="multiple" class="form-control">
+                                    <option *ngFor="let item of selectedrollnoC">{{item }} </option>
+                                 </select>
+                            </div>
+
+                            
+
+                    </div>
+              </div>
+
+        </div>
+     
+        <button  class="btn btn-primary" (click)="datasubmit()">Submit</button> 
+        <div class="colomn">
+            <br>
+               <div> <button (click)="onClickA()" class="btn btn-primary">A</button> </div> &nbsp;
+               <div> <button (click)="onClickB()"class="btn btn-primary">B</button> </div> &nbsp;
+               <div> <button (click)="onClickC()"class="btn btn-primary">C</button> </div>&nbsp;
+        </div>
+        
+       
+    </div>
+</div>
+</div>

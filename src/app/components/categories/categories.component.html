@@ -1,0 +1,9 @@
+<div class="container fluid">
+<h2>Category List</h2>
+    <ol>
+        <li *ngFor="let item of category">
+          <a routerLink={{item.categoryid}}>{{item.categoryname}} </a> 
+        </li>
+    </ol>
+
+</div>
